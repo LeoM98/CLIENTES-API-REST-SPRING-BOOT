@@ -39,7 +39,7 @@ public class Cliente implements Serializable {
 	
 	//Antes de crearse un nuevo valor para la tabla se crea una fecha
 	@PrePersist
-	public void preper() {
+	public void prepersist() {
 		this.createAt = new Date();
 	}
 	
