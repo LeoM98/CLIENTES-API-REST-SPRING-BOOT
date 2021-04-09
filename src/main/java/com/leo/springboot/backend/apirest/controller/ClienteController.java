@@ -73,10 +73,8 @@ public class ClienteController {
 			response.put("mensaje", "Ha ocurrido un error al intentar buscar al cliente con id "+id);
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		}
-		
-		response.put("mensaje", "Cliente encontrado con éxito");
-		response.put("cliente", clienteEncontrar);
-		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
+
+		return new ResponseEntity<Cliente>(clienteEncontrar, HttpStatus.OK);
 		
 		
 	}
